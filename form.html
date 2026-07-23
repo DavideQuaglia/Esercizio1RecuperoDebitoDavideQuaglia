@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prenotazione</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <header>
+        <p class="pa">Milano: cosa vedere in base al tempo</p>
+        <div class="linkH">
+            <a href="#home">Home</a>
+            <a href="cosaVedere.html">Cosa vedere</a>
+            <a href="itinerario.html">Itinerario</a>
+            <a href="contatti.html">Contatti</a>
+        </div>
+    </header>
+    <main>
+        <div class="allineamento">
+        <form class="prenota">
+            <h3>Prenota qua il tuo tour!</h3>
+            <div class="structForm">
+                <label for="nome">Nome:</label>
+                <br>
+                <input type="text" id="nome" required placeholder="inserisci il tuo nome:">
+            </div>
+            <br>
+            <div class="structForm">
+                <label for="cognome">Cognome:</label>
+                <br>
+                <input type="text" id="cognome" required placeholder="inserisci il tuo cognome:">
+            </div>
+            <br>
+            <div class="structForm">
+                <label for="email">email:</label>
+                <br>
+                <input type="email" id="email" required placeholder="es: mail@gmail.com">
+            </div>
+            <br>
+            <div class="structForm">
+                <label for="tour">Opzioni tour</label>
+                <br>
+                <select id="tour" required>
+                    <option value="">scegli opzione</option>
+                    <option value="tutto">tour completo</option>
+                    <option value="Stadio">solo Stadio</option>
+                    <option value="monumenti">solo monumenti(escluso Stadio)</option>
+                    <option value="altro">altro</option>
+                </select>
+            </div>
+            <br>
+            <button type="submit" class="invia" onclick="invia()">Conferma Prenotazione</button>
+        </form>
+        </div>
+    </main>
+    <br>
+    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modale1">Informazione</button>
+    <div class="modal fade" id="modale1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <div class="modal-title">Informazione</div>
+                </div>
+                <div class="modal-body">
+                    <p>il pagamento delle opzioni scelte verrà effettuato al momento della visita!</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">chiudi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
